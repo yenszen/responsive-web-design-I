@@ -66,8 +66,8 @@ h1, h2, h3, h4, h5 {
 
 /* Copy and paste your work from yesterday here and start to refactor into flexbox */
 body {
-	margin-left: 150px;
-	margin-right: 150px;
+    width: 80%;
+	margin: 0 auto;
 	/* border: 1px solid black; */
 }
 
@@ -102,7 +102,7 @@ header nav a {
 	display: flex;
 	justify-content: space-around;
 	/* background-color: grey; */
-	padding: 30px 10px;
+	padding: 30px 0;
 	border-bottom: 1px solid black;
 }
 
@@ -154,3 +154,47 @@ footer span {
 	justify-content: center;
 }
 
+/* for displays below 800px */
+@media (max-width: 800px) {
+    header {
+        flex-direction: column-reverse;
+        /* background-color: lightgreen; */
+	}
+
+	header nav {
+		width: 100%;
+		margin-top: 2rem;
+	}
+	
+	.top-div img {
+		display: none;
+	}
+}
+
+/* for displays below 500px */
+
+/* header nav {
+	display: flex;
+	width: 70%;
+	justify-content: space-between;
+} */
+
+@media (max-width: 500px) {
+	header nav {
+		flex-direction: column;
+		text-align: center;
+		/* border: 1px solid black; */
+	}
+
+	header nav a {
+		border-bottom: 1px solid gray;
+		width: 100%;
+		height: 4rem;
+		text-align: center;
+		/* background: green; */
+	}
+
+	header nav a:first-child {
+		border-top: 1px solid gray;
+	}
+}
